@@ -1,0 +1,34 @@
+{% extends 'starter-page.html' %}
+
+
+{% load static %}
+
+{% block body %}
+
+    <form action="" class="container" method="POST">
+    {% csrf_token %}
+    <h1 class="text-center">CONTACT US</h1>
+        <label for="name" class="form-label">Name :</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder=" Enter Company name" required="required">
+
+      <label for="email" class="form-label">Email address :</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="abc@gmail.com" required="required">
+
+        <br><br>
+
+      <label for="message" class="form-label">Message :</label>
+        <textarea name="message" id="message"  cols="40" rows="5" required="required" placeholder="Type something here...."></textarea>
+
+        <br><br>
+     <label for="phone" class="form-label">Phone number :</label>
+        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required="required">
+        <br><br>
+
+     <label for="staff" class="form-label">Staff number :</label>
+        <input type="number" id="staff" name="staff" class="form-control">
+
+   <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+
+{% endblock %}
